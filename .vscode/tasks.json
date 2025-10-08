@@ -1,0 +1,73 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "编译简单队列演示",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-Wall",
+                "-Wextra", 
+                "-std=c99",
+                "-g",
+                "-O2",
+                "-o",
+                "${workspaceFolder}/msgq/examples/02-principles/queue_demo.exe",
+                "${workspaceFolder}/msgq/examples/02-principles/simple_queue.c",
+                "${workspaceFolder}/msgq/examples/02-principles/queue_demo.c"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "编译简化Windows演示",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-Wall",
+                "-Wextra",
+                "-std=c99", 
+                "-g",
+                "-O2",
+                "-o",
+                "${workspaceFolder}/msgq/examples/03-practice/sensor_demo/simple_demo.exe",
+                "${workspaceFolder}/msgq/examples/03-practice/sensor_demo/simple_windows_demo.c"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "清理编译文件",
+            "type": "shell",
+            "command": "del",
+            "args": [
+                "/Q",
+                "${workspaceFolder}/msgq/examples/02-principles/queue_demo.exe",
+                "${workspaceFolder}/msgq/examples/03-practice/sensor_demo/simple_demo.exe",
+                "${workspaceFolder}/msgq/examples/03-practice/sensor_demo/message_queue.dat"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            }
+        }
+    ]
+}

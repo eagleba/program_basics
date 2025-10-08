@@ -1,0 +1,68 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "调试简单队列演示",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/msgq/examples/02-principles/queue_demo.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/msgq/examples/02-principles",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "miDebuggerPath": "gdb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "编译简单队列演示"
+        },
+        {
+            "name": "调试简化演示-消费者",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/msgq/examples/03-practice/sensor_demo/simple_demo.exe",
+            "args": ["consumer"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/msgq/examples/03-practice/sensor_demo",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "miDebuggerPath": "gdb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "编译简化Windows演示"
+        },
+        {
+            "name": "调试简化演示-生产者",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/msgq/examples/03-practice/sensor_demo/simple_demo.exe",
+            "args": ["producer"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/msgq/examples/03-practice/sensor_demo",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "miDebuggerPath": "gdb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "编译简化Windows演示"
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+# Windows版本的Makefile (使用MinGW + ZeroMQ)
+
+CC = gcc
+CFLAGS = -Wall -Wextra -std=c99 -O2 -I"C:\zmq\include"
+LDFLAGS = -L"C:\zmq\lib" -lzmq -lws2_32 -lwsock32
+TARGETS = producer.exe consumer.exe
+SOURCES = common.c
+
+# 默认目标
+all: $(TARGETS)
+
+# 编译生产者
+producer.exe: producer.c $(SOURCES)
+	$(CC) $(CFLAGS) -o producer.exe producer.c $(SOURCES) $(LDFLAGS)
+
+# 编译消费者
+consumer.exe: consumer.c $(SOURCES)
+	$(CC) $(CFLAGS) -o consumer.exe consumer.c $(SOURCES) $(LDFLAGS)
+
+# 清理
+clean:
+	del /Q $(TARGETS) 2>nul || echo "清理完成"
+
+# 运行演示
+run-demo:
+	@echo 请打开两个命令提示符窗口：
+	@echo 窗口1: make run-consumer
+	@echo 窗口2: make run-producer
+
+# 运行消费者
+run-consumer: consumer.exe
+	consumer.exe
+
+# 运行生产者
+run-producer: producer.exe
+	producer.exe
+
+# 帮助
+help:
+	@echo 可用目标：
+	@echo   all         - 编译所有程序
+	@echo   producer    - 编译生产者
+	@echo   consumer    - 编译消费者
+	@echo   clean       - 清理编译文件
+	@echo   run-demo    - 显示运行说明
+	@echo   run-consumer- 运行消费者
+	@echo   run-producer- 运行生产者
+	@echo   help        - 显示此帮助信息
+
+.PHONY: all clean run-demo run-consumer run-producer help
