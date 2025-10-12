@@ -1,0 +1,143 @@
+# ============================================
+# C/C++ 编译过程文件和可执行文件
+# ============================================
+
+# ========== 对象文件 ==========
+*.o
+*.obj
+*_debug.o
+
+# ========== 依赖文件 ==========
+*.d
+*.dep
+
+# ========== 可执行文件 ==========
+*.exe
+*.out
+*_debug
+*_debug.exe
+demo
+demo_debug
+
+# ========== 静态库 ==========
+*.a
+*.lib
+libqueue.a
+
+# ========== 动态库 ==========
+*.so
+*.so.*
+*.dll
+*.dylib
+
+# ========== 调试文件 ==========
+*.pdb
+*.ilk
+*.dSYM/
+
+# ========== 汇编文件 ==========
+*.s
+*.asm
+
+# ========== 预处理文件 ==========
+*.i
+*.ii
+
+# ========== 编译器生成的其他文件 ==========
+*.map
+*.lst
+*.sym
+
+# ========== 备份和临时文件 ==========
+*~
+*.bak
+*.swp
+*.swo
+*.tmp
+*.temp
+
+# ========== 编辑器和IDE文件 ==========
+# Visual Studio
+.vs/
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.sln
+*.suo
+*.user
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# CLion / IntelliJ
+.idea/
+cmake-build-*/
+
+# Eclipse
+.cproject
+.project
+.settings/
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+\#*\#
+.\#*
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# ========== 构建目录 ==========
+build/
+Build/
+BUILD/
+out/
+bin/
+obj/
+dist/
+Debug/
+Release/
+
+# ========== 测试和覆盖率文件 ==========
+*.gcda
+*.gcno
+*.gcov
+coverage/
+*.profraw
+*.profdata
+
+# ========== 其他 ==========
+# Core dumps
+core
+core.*
+vgcore.*
+
+# Logs
+*.log
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+*.tar.bz2
+*.rar
+*.7z
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# ========== 项目特定文件 ==========
+# 如果有其他需要忽略的项目特定文件，在此添加
+
