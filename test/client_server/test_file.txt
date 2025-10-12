@@ -1,0 +1,15 @@
+Hello, this is a test file for the file server!
+
+This file demonstrates the client-server communication model:
+- Client requests a file by name
+- Server reads the file content
+- Server sends content back through IPC
+- Client receives and displays the content
+
+Lines can contain different information:
+Line 1
+Line 2
+Line 3
+
+End of test file.
+
